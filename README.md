@@ -1,3 +1,7 @@
+# View Application 
+
+- https://paul-salvi.github.io/b6-fast-fingers-Paul-Salvi/ 
+
 # Fast Fingers
 
 Pesto Tech is proudly launching its own speed typing game named **Fast fingers**. You have been awarded with the project and you need to design and develop this project which should
