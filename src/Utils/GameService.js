@@ -58,6 +58,9 @@ const Utils = {
    getGameTimeout: (difficultyLevel) => {
       return 4000;
    },
+   getTotalTime: (difficulty, wordLength) => {
+      return Math.ceil(wordLength / difficulty) > 2 ? Math.ceil(wordLength / difficulty) * 100 : 200;
+   },
 
    getGameDifficultyFactor: () => {
       return parseFloat(sessionStorage.getItem(keyGameDifficultyFactor));
@@ -88,9 +91,9 @@ const Utils = {
    },
 
    getMaxScore: (scores) => {
-      var data = scores.map( score => { return TimerHelper.durationToMilliSec(score)  } );
+      var data = scores.map(score => { return TimerHelper.durationToMilliSec(score) });
       var mx = Math.max(...data);
-      return  TimerHelper.milliSecsToTime(mx);
+      return TimerHelper.milliSecsToTime(mx);
    },
 
    REDIRECT_TO_LOGIN: {
